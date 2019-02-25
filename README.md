@@ -1,12 +1,13 @@
 #### Date: 22-02-2019
 
-Using redux-saga in react project
--------------------------------------
+Using code splitting in react project to improve the application performance
+----------------------------------------------------
+
 #### local setup instructions
 
 clone the repo
 ```
-git clone 'repo_url'
+git clone https://github.com/gopal1166/code_splitting_react.git
 ```
 install the dependencies
 ```
@@ -17,17 +18,14 @@ run the server
 npm start
 ```
 
+then check the Network tab in developer tools, observe the chunks
 
 Summery:
----------------------
-creted redux store
+---------------------------------------------
 
-configured the store to our project
+created asyncComponent hoc to import components dynamically hoc/asyncComponent.js:
 
-configured redux dev tools, saga middleware
+created a Test component in components/Test.js
 
-created and run the saga rootSaga
-
-defined saga watchers, saga workers and exported as rootSaga
-
-dispatching actions from the components to watcher sagas
+dynamically imported the Test component using asyncComponent
+from components/Test.js in App.js
