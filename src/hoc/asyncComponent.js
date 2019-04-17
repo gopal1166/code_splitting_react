@@ -2,6 +2,7 @@
   basically our asyncComponent is a function that returns a component.
 */
 import React, {Component} from 'react';
+import { Spinner } from 'antd';
 
 const asyncComponent = (importComponent) => {
     return class extends Component {
@@ -18,7 +19,7 @@ const asyncComponent = (importComponent) => {
 
         render() {
             const C = this.state.component;
-            return C ? <C {...this.props}/> : null;
+            return C ? <C {...this.props}/> : <Spinner />;
         }
     }
 };
